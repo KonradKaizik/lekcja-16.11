@@ -14,14 +14,14 @@ jobs:
     name: Wdrożenie na serwer
     runs-on: ubuntu-latest
     steps: 
-    - name: Github Checkout
-    - uses: actions/checkout@v4
-    - name: Synchronizacja do FTP
-    - uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server:  172.203.249.51
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
+      - name: Github Checkout
+        uses: actions/checkout@v4
+      - name: Synchronizacja do FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server:  172.203.249.51
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
 
 
 
